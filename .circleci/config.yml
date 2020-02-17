@@ -1,5 +1,12 @@
 version: 2.1
 
+dependencies:
+  pre:
+    - rm -rf ~/.yarn
+    - npm install -g yarn
+    - yarn -v
+
+
 orbs:
   docker: circleci/docker@0.5.13
 
