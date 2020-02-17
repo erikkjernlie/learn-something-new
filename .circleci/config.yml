@@ -39,7 +39,7 @@ workflows:
     jobs:
       - run_tests
       - docker/publish:
-          image: gumshoe/$CIRCLE_PROJECT_REPONAME
+          image: gumshoe/learn-something-new
           dockerfile: dockerfile
           requires:
             - run_tests
