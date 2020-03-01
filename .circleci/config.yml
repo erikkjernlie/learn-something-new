@@ -37,7 +37,7 @@ jobs:
           command: npm run build
       - run:
           name: install surge
-          command: npm install -g surge  
+          command: sudo npm install -g surge  
       - run: 
           name: deploy
           command: surge build learnsomethingnewnow.surge.sh
