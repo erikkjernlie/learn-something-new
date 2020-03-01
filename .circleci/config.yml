@@ -33,6 +33,17 @@ jobs:
           name: test
           command: npm test
   
+
+pipelines:
+  branches:
+    master:
+      - step:
+          script:
+            - npm install -g surge
+            - npm install
+            - npm run build
+            - surge build learnsomethingnewnow.surge.sh
+
 workflows:
   version: 2
   build_deploy:
