@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import { firestore } from "../../firebase";
 import { useHistory } from "react-router-dom";
-import { Profile } from "src/types/index";
-import { User } from "src/types/index";
 //import { errorFromErrorCode } from '@/services/ErrorService';
 
 //TODO: Use errorFromErrorCode to get norwegian errors
