@@ -32,18 +32,17 @@ jobs:
       - run:
           name: test
           command: npm test
+      - run:
+          name: build
+          command: npm run build
+      - run:
+          name: install surge
+          command: npm install -g surge  
+      - run: 
+          name: deploy
+          command: surge build learnsomethingnewnow.surge.sh
+
   
-
-pipelines:
-  branches:
-    master:
-      - step:
-          script:
-            - npm install -g surge
-            - npm install
-            - npm run build
-            - surge build learnsomethingnewnow.surge.sh
-
 workflows:
   version: 2
   build_deploy:
