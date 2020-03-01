@@ -33,7 +33,7 @@ export const useRegister = () => {
 
 export const useSignIn = () => {
   const [signingIn, setSigningIn] = useState(false);
-  const [error, setError] = useState(null);
+  const [error] = useState(null);
 
   const withEmailAndPassword = async (email, password) => {
     setSigningIn(true);
